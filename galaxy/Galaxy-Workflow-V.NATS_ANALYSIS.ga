@@ -1,0 +1,511 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "comments": [],
+    "format-version": "0.1",
+    "name": "V.NATS ANALYSIS",
+    "report": {
+        "markdown": "\n# Workflow Execution Report\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs()\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs()\n```\n\n## Workflow\n```galaxy\nworkflow_display()\n```\n"
+    },
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Raw Reads"
+                }
+            ],
+            "label": "Raw Reads",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 5.964058529919271,
+                "top": 260.5025430751563
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "71b831e7-93fa-4b9f-afcb-2bd151c66ca2",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "NanoPore Contaminant List"
+                }
+            ],
+            "label": "NanoPore Contaminant List",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 0,
+                "top": 348.7314036927869
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "299c3d42-d49c-4714-9743-4291145bf1e9",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "NanoPore Adapters"
+                }
+            ],
+            "label": "NanoPore Adapters",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 7.450071283485613,
+                "top": 461.2812389038332
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "a6392f01-c408-4be3-9b2b-e0a98a6df1c3",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 3,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "GCA_Reference.fna"
+                }
+            ],
+            "label": "GCA_Reference.fna",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 5.960079762601737,
+                "top": 577.3946854825965
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "e449f8b8-7ebd-4101-ae05-47d3687cef53",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/porechop/porechop/0.2.4+galaxy1",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "input_file": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Porechop",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "fasta"
+                }
+            ],
+            "position": {
+                "left": 355.5914158143659,
+                "top": 290.2976273918195
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/porechop/porechop/0.2.4+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "c398c6b9381f",
+                "name": "porechop",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"adapter_search_settings\": {\"adapter_threshold\": \"90.0\", \"check_reads\": \"10000\", \"scoring_scheme\": \"3,-6,-5,-2\"}, \"barcode_binning_settings\": {\"barcode_threshold\": \"75.0\", \"barcode_diff\": \"5.0\", \"require_two_barcodes\": false, \"discard_unassigned\": false}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"end_adapter_settings\": {\"end_size\": \"150\", \"min_trim_size\": \"4\", \"extra_end_trim\": \"2\", \"end_threshold\": \"75.0\"}, \"format\": \"fastq\", \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"log_file\": false, \"middle_adapter_settings\": {\"no_split\": false, \"discard_middle\": false, \"middle_threshold\": \"85.0\", \"extra_middle_trim_good_side\": \"10\", \"extra_middle_trim_bad_side\": \"100\", \"min_split_read_size\": \"1000\"}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "0.2.4+galaxy1",
+            "type": "tool",
+            "uuid": "35077c37-4242-4b9b-ad7a-dee62497ca60",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "adapters": {
+                    "id": 2,
+                    "output_name": "output"
+                },
+                "contaminants": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "input_file": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "FastQC",
+            "outputs": [
+                {
+                    "name": "html_file",
+                    "type": "html"
+                },
+                {
+                    "name": "text_file",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 354.094035154178,
+                "top": 0
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "2c64fded1286",
+                "name": "fastqc",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"adapters\": {\"__class__\": \"ConnectedValue\"}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"contaminants\": {\"__class__\": \"ConnectedValue\"}, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"kmers\": \"7\", \"limits\": null, \"min_length\": null, \"nogroup\": false, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "0.74+galaxy1",
+            "type": "tool",
+            "uuid": "f467fd0c-b221-4f71-ba59-87e29b0a876e",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bakta/bakta/1.9.4+galaxy1",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "input_option|input_file": {
+                    "id": 3,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Bakta",
+                    "name": "input_option"
+                }
+            ],
+            "label": null,
+            "name": "Bakta",
+            "outputs": [
+                {
+                    "name": "annotation_tsv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "annotation_gff3",
+                    "type": "gff3"
+                },
+                {
+                    "name": "annotation_ffn",
+                    "type": "fasta"
+                },
+                {
+                    "name": "annotation_plot",
+                    "type": "svg"
+                }
+            ],
+            "position": {
+                "left": 348.14100349368164,
+                "top": 724.6896951404019
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bakta/bakta/1.9.4+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "1942e86e2ee1",
+                "name": "bakta",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"annotation\": {\"complete\": false, \"prodigal\": null, \"translation_table\": \"11\", \"keep_contig_headers\": false, \"replicons\": null, \"compliant\": false, \"proteins\": null, \"meta\": false, \"regions\": null}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"input_option\": {\"input_file\": {\"__class__\": \"ConnectedValue\"}, \"min_contig_length\": null, \"bakta_db_select\": \"V5.0_2023-02-20\", \"amrfinder_db_select\": \"amrfinderplus_V3.12_2024-05-02.2\"}, \"organism\": {\"genus\": null, \"species\": null, \"strain\": null, \"plasmid\": null}, \"output_files\": {\"output_selection\": [\"file_tsv\", \"file_gff3\", \"file_ffn\", \"file_plot\"]}, \"workflow\": {\"skip_analysis\": null}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "1.9.4+galaxy1",
+            "type": "tool",
+            "uuid": "a942b630-06a5-4a41-86b6-ecd22046cabf",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.28+galaxy1",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "fastq_input|fastq_input1": {
+                    "id": 4,
+                    "output_name": "outfile"
+                },
+                "reference_source|ref_file": {
+                    "id": 3,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Map with minimap2",
+                    "name": "fastq_input"
+                },
+                {
+                    "description": "runtime parameter for tool Map with minimap2",
+                    "name": "reference_source"
+                }
+            ],
+            "label": null,
+            "name": "Map with minimap2",
+            "outputs": [
+                {
+                    "name": "alignment_output",
+                    "type": "bam"
+                }
+            ],
+            "position": {
+                "left": 755.876552264739,
+                "top": 291.78523165231286
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.28+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "66367287b4e6",
+                "name": "minimap2",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"alignment_options\": {\"splicing\": {\"splice_mode\": \"preset\", \"__current_case__\": 0}, \"A\": null, \"B\": null, \"O\": null, \"O2\": null, \"E\": null, \"E2\": null, \"z\": null, \"z2\": null, \"s\": null, \"no_end_flt\": true}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"fastq_input\": {\"fastq_input_selector\": \"single\", \"__current_case__\": 0, \"fastq_input1\": {\"__class__\": \"ConnectedValue\"}, \"analysis_type_selector\": null}, \"indexing_options\": {\"H\": false, \"k\": null, \"w\": null, \"I\": null}, \"io_options\": {\"output_format\": \"BAM\", \"Q\": false, \"L\": false, \"K\": null, \"cs\": null, \"c\": false, \"eqx\": false, \"Y\": false}, \"mapping_options\": {\"N\": null, \"F\": null, \"f\": null, \"kmer_ocurrence_interval\": {\"interval\": \"\", \"__current_case__\": 1}, \"min_occ_floor\": null, \"q_occ_frac\": \"0.01\", \"g\": null, \"r\": null, \"n\": null, \"m\": null, \"max_chain_skip\": null, \"max_chain_iter\": null, \"X\": false, \"p\": null, \"mask_len\": null}, \"reference_source\": {\"reference_source_selector\": \"history\", \"__current_case__\": 1, \"ref_file\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "2.28+galaxy1",
+            "type": "tool",
+            "uuid": "8a41e296-07d1-4dea-8a10-cfb11b3436ac",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "8": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/4.6.0+galaxy0",
+            "errors": null,
+            "id": 8,
+            "input_connections": {
+                "fastq_input|fastq_input_single": {
+                    "id": 4,
+                    "output_name": "outfile"
+                },
+                "reference_source|ref_file": {
+                    "id": 3,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool snippy",
+                    "name": "fastq_input"
+                },
+                {
+                    "description": "runtime parameter for tool snippy",
+                    "name": "reference_source"
+                }
+            ],
+            "label": null,
+            "name": "snippy",
+            "outputs": [
+                {
+                    "name": "snpvcf",
+                    "type": "vcf"
+                },
+                {
+                    "name": "snpgff",
+                    "type": "gff3"
+                },
+                {
+                    "name": "snptab",
+                    "type": "tabular"
+                },
+                {
+                    "name": "snpsum",
+                    "type": "tabular"
+                },
+                {
+                    "name": "snplog",
+                    "type": "txt"
+                },
+                {
+                    "name": "snpalign",
+                    "type": "fasta"
+                },
+                {
+                    "name": "snpconsensus",
+                    "type": "fasta"
+                },
+                {
+                    "name": "snpsbam",
+                    "type": "bam"
+                },
+                {
+                    "name": "outdir",
+                    "type": "zip"
+                }
+            ],
+            "position": {
+                "left": 611.3460105902077,
+                "top": 690.4193786042746
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/4.6.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "08d22d220254",
+                "name": "snippy",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"fasta\", \"adv\": {\"mapqual\": \"60\", \"mincov\": \"10\", \"minfrac\": \"0.9\", \"minqual\": \"100.0\", \"rgid\": \"\", \"bwaopt\": \"\", \"rename_cons\": false}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"fastq_input\": {\"fastq_input_selector\": \"single\", \"__current_case__\": 1, \"fastq_input_single\": {\"__class__\": \"ConnectedValue\"}}, \"outputs\": [\"outvcf\", \"outtab\", \"outzip\", \"outgff\", \"outsum\", \"outlog\", \"outaln\", \"outcon\", \"outbam\"], \"reference_source\": {\"reference_source_selector\": \"history\", \"__current_case__\": 1, \"ref_file\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "4.6.0+galaxy0",
+            "type": "tool",
+            "uuid": "0433093e-0e5e-4c3a-8598-2c93e0e5792c",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "9": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1",
+            "errors": null,
+            "id": 9,
+            "input_connections": {
+                "adapters": {
+                    "id": 2,
+                    "output_name": "output"
+                },
+                "contaminants": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "input_file": {
+                    "id": 4,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "FastQC",
+            "outputs": [
+                {
+                    "name": "html_file",
+                    "type": "html"
+                },
+                {
+                    "name": "text_file",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 1023.0185899819668,
+                "top": 508.4282499720358
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "2c64fded1286",
+                "name": "fastqc",
+                "owner": "devteam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"adapters\": {\"__class__\": \"ConnectedValue\"}, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"contaminants\": {\"__class__\": \"ConnectedValue\"}, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"kmers\": \"7\", \"limits\": null, \"min_length\": null, \"nogroup\": false, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "0.74+galaxy1",
+            "type": "tool",
+            "uuid": "e86c1019-8a39-4d25-bf82-f153cd645e1b",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "10": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.3+galaxy0",
+            "errors": null,
+            "id": 10,
+            "input_connections": {
+                "input1": {
+                    "id": 7,
+                    "output_name": "alignment_output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool QualiMap BamQC",
+                    "name": "input1"
+                }
+            ],
+            "label": null,
+            "name": "QualiMap BamQC",
+            "outputs": [
+                {
+                    "name": "raw_data",
+                    "type": "input"
+                },
+                {
+                    "name": "output_html",
+                    "type": "html"
+                }
+            ],
+            "position": {
+                "left": 1021.6411582787943,
+                "top": 290.7820759347754
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.3+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "30a201c9c310",
+                "name": "qualimap_bamqc",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"duplicate_skipping\": \"0\", \"input1\": {\"__class__\": \"RuntimeValue\"}, \"per_base_coverage\": false, \"plot_specific\": {\"n_bins\": \"400\", \"paint_chromosome_limits\": true, \"genome_gc_distr\": null, \"homopolymer_size\": \"3\"}, \"stats_regions\": {\"region_select\": \"all\", \"__current_case__\": 0}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "2.3+galaxy0",
+            "type": "tool",
+            "uuid": "0b2a0848-16be-4ee9-97ec-ca88622198b9",
+            "when": null,
+            "workflow_outputs": []
+        }
+    },
+    "tags": [],
+    "uuid": "27c40f16-5da7-4bb6-a742-9df4bac70900",
+    "version": 5
+}
